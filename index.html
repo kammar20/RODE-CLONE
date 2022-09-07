@@ -20,7 +20,114 @@
 </head>
 
 <body>
+    <!--/ Header -->
+    <header class="head ">
+        <!--* Small Wrapper -->
+        <div class="smallWrapper">
+            <!--. top nav -->
+            <div class="topNav hidden xl:flex justify-between items-start py-1">
+                <!-- location -->
+                <div class="cursor-pointer">
+                    <i class="fa-solid fa-location-dot text-midGray"></i>
+                    <span class="text-midGray  mr-1">EN</span>
+                    <i class="fa-solid fa-caret-down text-midGray "></i>
+                </div>
+                <!-- admin -->
+                <div>
+                    <i class="fa-regular fa-user text-midGray cursor-pointer text-[20px]"></i>
+                </div>
+            </div>
+        </div>
 
+        <!--. HR -->
+        <hr class="hr hidden xl:block">
+
+        <!--* Small Wrapper -->
+        <div class="smallWrapper">
+            <!--. Bottom nav -->
+            <div class="bottom-nav flex justify-between items-center py-2 xl:pt-8 xl:pb-4 ">
+                <!--* menu and location group -->
+                <div class="flex items-center flex-grow xl:hidden ">
+                    <!-- hamburger Menu -->
+                    <div class="ml-2 mr-4 text-midGray sm:ml-4 sm:mr-6 lg:text-[20px] xl:hidden ">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+                    <!-- location -->
+                    <div class="cursor-pointer xl:hidden">
+                        <i class="fa-solid fa-location-dot text-midGray lg:text-[20px]"></i>
+                        <span class="text-midGray  mr-1 lg:text-[20px] lg:text-darkGray">EN</span>
+                        <i class="fa-solid fa-caret-down text-midGray lg:text-[20px] lg:text-darkGray"></i>
+                    </div>
+                </div>
+
+                <!-- logo -->
+                <div class="flex-grow pr-5 sm:pl-10  md:pl-28 lg:pl-36 xl:flex-grow-0 xl:pl-0">
+                    <img src="./img/nav-logo.svg" alt="" class="w-[86.50px] h-[24px]">
+                </div>
+
+                <!-- nav Menu -->
+                <div class="nav-menu hidden xl:flex justify-between">
+                    <li class="nav-list">
+                        <a href="#" class="nav-link text-sm px-6">PRODUCTS</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link text-sm px-6">USER GUIDES</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link text-sm px-6">SOLUTIONS</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link text-sm px-6">APPAREL</a>
+                    </li>
+                    <li class="nav-list">
+                        <a href="#" class="nav-link text-sm px-6">SUPPORT</a>
+                    </li>
+                </div>
+
+                <!-- Magnifying-Glass Icon -->
+                <div class="mr-2  flex-grow text-right sm:mr-4 xl:flex-grow-0 xl:mr-4">
+                    <i class="fa-solid fa-magnifying-glass text-[15px] text-midGray md:text-[20px] lg:text-[27px]"></i>
+                </div>
+
+            </div>
+            <!--. bottom nav end  -->
+        </div>
+    </header>
+
+
+    <!--/ Section 1 Hero Section  -->
+    <section class="hero">
+        <!--* Big Wrapper  -->
+        <div class="bigWrapper">
+            <!--. hero 1 -->
+            <div class="hero-1 bg-black">
+                <!-- left-img -->
+                <div>
+                    <img src="./img/bg-1-mobile.jpg" alt="" class="mb-5  mx-auto md:w-[100%]">
+                </div>
+                <!-- right content -->
+                <div class="px-3">
+                    <img src="./img/bg-1-logo.svg" alt="" class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px]">
+                    <h4 class="h4 text-white text-center mb-3">The Revolution Is Here</h4>
+                    <p class="para mb-5 sm:w-[80%] sm:mx-auto ">The RØDECaster Pro II is the world's most powerful
+                        all-in-one audio
+                        solution
+                        for
+                        streamers, podcasters, musicians, and creators. Take your content to the next level.</p>
+                    <div class="btn-group py-5 flex justify-center items-center">
+                        <a href="#" class="text-gold mr-5 font-semibold">LEARN MORE <i
+                                class="fa-solid fa-chevron-right "></i></a>
+                        <a href="#"
+                            class="text-white bg-gold font-semibold px-5 py-1.5 rounded-full hover:bg-white hover:text-gold transition-all duration-300 ease-in">BUY
+                            NOW</a>
+                    </div>
+                </div>
+            </div>
+            <!--. hero 1 End -->
+            <div class="hero2 bg-red-400 md:bg-teal-600 h-[50vh]"></div>
+        </div>
+    </section>
 </body>
 
 </html>
