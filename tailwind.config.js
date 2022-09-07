@@ -11,7 +11,12 @@ module.exports = {
 
     extend: {
       backgroundImage: {
-        'bg-1': "url('../img/bg-1.jpg')",
+        hero: "url('../img/bg-1.jpg')",
+        'product-1': "url('../img/bg-2.jpg')",
+        'product-2': "url('../img/bg-3.jpg')",
+        'product-3': "url('../img/bg-4.jpg')",
+        'product-4': "url('../img/bg-5.jpg')",
+        'product-5': "url('../img/bg-6.jpg')",
       },
       colors: {
         gold: '#ad9970',
