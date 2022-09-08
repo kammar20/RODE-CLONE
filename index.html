@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RØDE Microphones</title>
     <!--! Favicon -->
-    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon" />
     <!--! Font Awesome -->
     <script src="https://kit.fontawesome.com/8c44950f49.js" crossorigin="anonymous"></script>
     <!--! Googel Font -->
@@ -15,13 +15,91 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet" />
-    <!--! CSS Style Sheet -->
-    <link rel="stylesheet" href="./css/style.css">
+    <!--! Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!--! Tailwind Custom CSS  -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+
+
+        body{
+            font-family: 'Inter', sans-serif;
+        }  
+
+        .smallWrapper {
+            max-width: 1200px;
+            margin:0 auto;
+        }
+
+        .bigWrapper{
+            max-width: 1920px;
+            margin:0 auto;
+        }
+
+        .h2{
+            font-size:32px;
+        }
+        
+        .h3{
+            font-size:28px;
+            color:#262626;
+        }
+
+        .h4{
+            font-size:24px;
+            font-weight:600;
+        }
+
+        .para{
+            font-size:16px;
+            color:#ffffff80;
+        }
+
+        li{
+            list-style-type:none ;
+        }
+    }
+    
+    </style>
+
+    <!--! tailwind Config  -->
+    <script>
+        tailwind.config = {
+            theme: {
+                screens: {
+                    sm: '481px',
+                    md: '768px',
+                    lg: '991px',
+                    xl: '1200px',
+                },
+                extend: {
+                    backgroundImage: {
+                        hero: "url('../img/bg-1.jpg')",
+                        'product-1': "url('../img/bg-2.jpg')",
+                        'product-2': "url('../img/bg-3.jpg')",
+                        'product-3': "url('../img/bg-4.jpg')",
+                        'product-4': "url('../img/bg-5.jpg')",
+                        'product-5': "url('../img/bg-6.jpg')",
+                    },
+                    colors: {
+                        gold: '#ad9970',
+                        offWhite: '#f8f9fa',
+                        darkGray: '#262626',
+                        midGray: '#767676',
+                        paraColor: '#ffffff80',
+                        white: '#ffffff',
+                        black: '#000000',
+                    },
+                },
+            },
+        };
+    </script>
 </head>
 
 <body>
     <!--/ Header -->
-    <header class="head ">
+    <header class="head">
         <!--* Small Wrapper -->
         <div class="smallWrapper">
             <!--. top nav -->
@@ -29,8 +107,8 @@
                 <!-- location -->
                 <div class="cursor-pointer">
                     <i class="fa-solid fa-location-dot text-midGray"></i>
-                    <span class="text-midGray  mr-1">EN</span>
-                    <i class="fa-solid fa-caret-down text-midGray "></i>
+                    <span class="text-midGray mr-1">EN</span>
+                    <i class="fa-solid fa-caret-down text-midGray"></i>
                 </div>
                 <!-- admin -->
                 <div>
@@ -40,30 +118,30 @@
         </div>
 
         <!--. HR -->
-        <hr class="hr hidden xl:block">
+        <hr class="hr hidden xl:block" />
 
         <!--* Small Wrapper -->
         <div class="smallWrapper">
             <!--. Bottom nav -->
-            <div class="bottom-nav flex justify-between items-center py-2 xl:pt-8 xl:pb-4 ">
+            <div class="bottom-nav flex justify-between items-center py-2 xl:pt-8 xl:pb-4">
                 <!--* menu and location group -->
-                <div class="flex items-center flex-grow xl:hidden ">
+                <div class="flex items-center flex-grow xl:hidden">
                     <!-- hamburger Menu -->
-                    <div class="ml-2 mr-4 text-midGray sm:ml-4 sm:mr-6 lg:text-[20px] xl:hidden ">
+                    <div class="ml-2 mr-4 text-midGray sm:ml-4 sm:mr-6 lg:text-[20px] xl:hidden">
                         <i class="fa-solid fa-bars"></i>
                     </div>
 
                     <!-- location -->
                     <div class="cursor-pointer xl:hidden">
                         <i class="fa-solid fa-location-dot text-midGray lg:text-[20px]"></i>
-                        <span class="text-midGray  mr-1 lg:text-[20px] lg:text-darkGray">EN</span>
+                        <span class="text-midGray mr-1 lg:text-[20px] lg:text-darkGray">EN</span>
                         <i class="fa-solid fa-caret-down text-midGray lg:text-[20px] lg:text-darkGray"></i>
                     </div>
                 </div>
 
                 <!-- logo -->
-                <div class="flex-grow pr-5 sm:pl-10  md:pl-28 lg:pl-36 xl:flex-grow-0 xl:pl-0">
-                    <img src="./img/nav-logo.svg" alt="" class="w-[86.50px] h-[24px]">
+                <div class="flex-grow pr-5 sm:pl-10 md:pl-28 lg:pl-36 xl:flex-grow-0 xl:pl-0">
+                    <img src="./img/nav-logo.svg" alt="" class="w-[86.50px] h-[24px]" />
                 </div>
 
                 <!-- nav Menu -->
@@ -86,43 +164,41 @@
                 </div>
 
                 <!-- Magnifying-Glass Icon -->
-                <div class="mr-2  flex-grow text-right sm:mr-4 xl:flex-grow-0 xl:mr-4">
+                <div class="mr-2 flex-grow text-right sm:mr-4 xl:flex-grow-0 xl:mr-4">
                     <i class="fa-solid fa-magnifying-glass text-[15px] text-midGray md:text-[20px] lg:text-[27px]"></i>
                 </div>
-
             </div>
             <!--. bottom nav end  -->
         </div>
     </header>
 
-
     <!--/ Section  Hero Section  -->
     <section class="hero bg-black">
         <!--* Big Wrapper  -->
-        <div class="bigWrapper ">
+        <div class="bigWrapper">
             <!--. hero  -->
             <div class="hero-1 bg-black xl:bg-hero xl:h-[700px] bg-center bg-no-repeat bg-cover">
                 <!-- left-img -->
                 <div class="xl:hidden">
-                    <img src="./img/bg-1-mobile.jpg" alt="" class="mb-5  mx-auto md:w-[100%]">
+                    <img src="./img/bg-1-mobile.jpg" alt="" class="mb-5 mx-auto md:w-[100%]" />
                 </div>
                 <!-- right content -->
                 <div
-                    class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center xl:pr-28 xl:pt-6 xl:ml-auto ">
+                    class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center xl:pr-28 xl:pt-6 xl:ml-auto">
                     <img src="./img/bg-1-logo.svg" alt=""
-                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px] ">
-                    <h4 class="h4 text-white text-center mb-3">The Revolution Is Here</h4>
-                    <p class="para mb-5 sm:w-[80%] sm:mx-auto xl:text-center xl:w-[84%]">The RØDECaster Pro II is the
-                        world's most
-                        powerful
-                        all-in-one audio
-                        solution
-                        for
-                        streamers, podcasters, musicians, and creators. Take your content to the next level.</p>
+                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px]" />
+                    <h4 class="h4 text-white text-center mb-3">
+                        The Revolution Is Here
+                    </h4>
+                    <p class="para mb-5 sm:w-[80%] sm:mx-auto xl:text-center xl:w-[84%]">
+                        The RØDECaster Pro II is the world's most powerful all-in-one
+                        audio solution for streamers, podcasters, musicians, and creators.
+                        Take your content to the next level.
+                    </p>
                     <!-- btn group -->
                     <div class="btn-group py-5 flex justify-center items-center md:py-6">
                         <a href="#" class="text-gold mr-5 font-semibold">LEARN MORE <i
-                                class="fa-solid fa-chevron-right "></i></a>
+                                class="fa-solid fa-chevron-right"></i></a>
                         <a href="#"
                             class="text-white bg-gold font-semibold px-5 py-1.5 rounded-full hover:bg-white hover:text-gold transition-all duration-300 ease-in">BUY
                             NOW</a>
@@ -134,31 +210,32 @@
     </section>
     <!--/ Section Hero Section End -->
 
-
-
     <!--/ Product section -->
-    <section class="Product ">
+    <section class="Product">
         <!--* Big Wrapper  -->
-        <div class="bigWrapper ">
+        <div class="bigWrapper">
             <!--. Product 1  -->
             <div class="product-1 xl:bg-product-1 xl:h-[650px] bg-center bg-no-repeat bg-cover">
                 <!-- left-img -->
                 <div class="xl:hidden">
-                    <img src="./img/bg-2-mobile.jpg" alt="" class="mb-5  mx-auto md:w-[100%] md:mb-8">
+                    <img src="./img/bg-2-mobile.jpg" alt="" class="mb-5 mx-auto md:w-[100%] md:mb-8" />
                 </div>
                 <!-- right content -->
-                <div class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center  xl:pt-6 xl:pl-16">
+                <div class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center xl:pt-6 xl:pl-16">
                     <img src="./img/bg-2-logo.svg" alt=""
-                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px] ">
-                    <h4 class="h4 text-black text-center mb-3">Your Search For The Perfect Headphones Is Over</h4>
-                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-center xl:w-[80%]">Experience sound
-                        like never
-                        before with the NTH-100s. Exceptional sonic performance, superior comfort and iconic looks that
-                        inspires creativity.</p>
+                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px]" />
+                    <h4 class="h4 text-black text-center mb-3">
+                        Your Search For The Perfect Headphones Is Over
+                    </h4>
+                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-center xl:w-[80%]">
+                        Experience sound like never before with the NTH-100s. Exceptional
+                        sonic performance, superior comfort and iconic looks that inspires
+                        creativity.
+                    </p>
                     <!-- btn group -->
                     <div class="btn-group py-5 flex justify-center items-center md:py-6">
                         <a href="#" class="text-gold mr-5 font-semibold">LEARN MORE <i
-                                class="fa-solid fa-chevron-right "></i></a>
+                                class="fa-solid fa-chevron-right"></i></a>
                         <a href="#"
                             class="text-white bg-gold font-semibold px-5 py-1.5 rounded-full hover:bg-white hover:text-gold transition-all duration-300 ease-in">BUY
                             NOW</a>
@@ -169,25 +246,29 @@
             <!--. Product 1 End -->
 
             <!--. Product 2 -->
-            <div class="Product-2  xl:bg-product-2 xl:h-[650px] bg-center bg-no-repeat bg-cover">
+            <div class="Product-2 xl:bg-product-2 xl:h-[650px] bg-center bg-no-repeat bg-cover">
                 <!-- left-img -->
                 <div class="xl:hidden">
-                    <img src="./img/bg-3-mobile.jpg" alt="" class="mb-5  mx-auto md:w-[100%]">
+                    <img src="./img/bg-3-mobile.jpg" alt="" class="mb-5 mx-auto md:w-[100%]" />
                 </div>
                 <!-- right content -->
                 <div
-                    class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center xl:pr-28 xl:pt-6 xl:ml-auto ">
+                    class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center xl:pr-28 xl:pt-6 xl:ml-auto">
                     <img src="./img/bg-3-logo.svg" alt=""
-                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px] ">
-                    <h4 class="h4 text-black text-center mb-3">Studio-Quality Recording, Made Simple</h4>
-                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-center xl:w-[84%]">The NT-USB is a
-                        studio-quality USB condenser microphone that offers impeccable audio, elegant looks and premium
-                        features, all in an easy-to-use form factor, the NT-USB will have you sounding like a pro in
-                        seconds.</p>
+                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px]" />
+                    <h4 class="h4 text-black text-center mb-3">
+                        Studio-Quality Recording, Made Simple
+                    </h4>
+                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-center xl:w-[84%]">
+                        The NT-USB is a studio-quality USB condenser microphone that
+                        offers impeccable audio, elegant looks and premium features, all
+                        in an easy-to-use form factor, the NT-USB will have you sounding
+                        like a pro in seconds.
+                    </p>
                     <!-- btn group -->
                     <div class="btn-group py-5 flex justify-center items-center md:py-6">
                         <a href="#" class="text-gold mr-5 font-semibold">LEARN MORE <i
-                                class="fa-solid fa-chevron-right "></i></a>
+                                class="fa-solid fa-chevron-right"></i></a>
                         <a href="#"
                             class="text-white bg-gold font-semibold px-5 py-1.5 rounded-full hover:bg-white hover:text-gold transition-all duration-300 ease-in">BUY
                             NOW</a>
@@ -201,26 +282,27 @@
             <div class="product-3 xl:bg-product-3 xl:h-[650px] bg-center bg-no-repeat bg-cover">
                 <!-- left-img -->
                 <div class="xl:hidden">
-                    <img src="./img/bg-4-mobile.jpg" alt="" class="mb-5  mx-auto md:w-[100%] md:mb-8">
+                    <img src="./img/bg-4-mobile.jpg" alt="" class="mb-5 mx-auto md:w-[100%] md:mb-8" />
                 </div>
                 <!-- right content -->
-                <div class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center  xl:pt-6   xl:pl-16">
+                <div class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center xl:pt-6 xl:pl-16">
                     <!-- mobile logo -->
                     <img src="./img/bg-4-logo-mobile.svg" alt=""
-                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:hidden ">
+                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:hidden" />
                     <!-- bigger screen logo -->
                     <img src="./img/bg-4-logo.svg" alt=""
-                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px] hidden xl:block ">
-                    <h4 class="h4 text-black text-center mb-3 xl:text-white">Broadcast-grade Dynamic Microphone</h4>
-                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-white xl:text-center xl:w-[70%]">Give your
-                        voice that
-                        rich,
-                        broadcast sound with the PodMic. Perfect for livestreaming, voice-over, podcasting and gameplay.
+                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px] hidden xl:block" />
+                    <h4 class="h4 text-black text-center mb-3 xl:text-white">
+                        Broadcast-grade Dynamic Microphone
+                    </h4>
+                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-white xl:text-center xl:w-[70%]">
+                        Give your voice that rich, broadcast sound with the PodMic.
+                        Perfect for livestreaming, voice-over, podcasting and gameplay.
                     </p>
                     <!-- btn group -->
                     <div class="btn-group py-5 flex justify-center items-center md:py-6">
                         <a href="#" class="text-gold mr-5 font-semibold xl:text-white">LEARN MORE <i
-                                class="fa-solid fa-chevron-right "></i></a>
+                                class="fa-solid fa-chevron-right"></i></a>
                         <a href="#"
                             class="text-white bg-gold font-semibold px-5 py-1.5 rounded-full hover:bg-white hover:text-gold transition-all duration-300 ease-in">BUY
                             NOW</a>
@@ -231,28 +313,32 @@
             <!--. Product 3 End -->
 
             <!--. Product 4 -->
-            <div class="Product-4  xl:bg-product-4 xl:h-[650px] bg-center bg-no-repeat bg-cover">
+            <div class="Product-4 xl:bg-product-4 xl:h-[650px] bg-center bg-no-repeat bg-cover">
                 <!-- left-img -->
                 <div class="xl:hidden">
-                    <img src="./img/bg-5-mobile.jpg" alt="" class="mb-5  mx-auto md:w-[100%]">
+                    <img src="./img/bg-5-mobile.jpg" alt="" class="mb-5 mx-auto md:w-[100%]" />
                 </div>
                 <!-- right content -->
-                <div class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center xl:pt-6 xl:ml-auto ">
+                <div class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center xl:pt-6 xl:ml-auto">
                     <!-- mobile logo -->
                     <img src="./img/bg-5-logo-mobile.svg" alt=""
-                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:hidden ">
+                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:hidden" />
                     <!-- bigger screen logo -->
                     <img src="./img/bg-5-logo.svg" alt=""
-                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px] hidden xl:block ">
-                    <h4 class="h4 text-black text-center mb-3 xl:text-white">Next Generation Wireless Audio</h4>
-                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-white xl:text-center xl:w-[60%]">The
-                        Wireless GO II is
-                        the world's most powerful and versatile wireless microphone. With an unparalleled feature set
-                        and ultra-compact form factor, this is next generation wireless audio for every creator.</p>
+                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px] hidden xl:block" />
+                    <h4 class="h4 text-black text-center mb-3 xl:text-white">
+                        Next Generation Wireless Audio
+                    </h4>
+                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-white xl:text-center xl:w-[60%]">
+                        The Wireless GO II is the world's most powerful and versatile
+                        wireless microphone. With an unparalleled feature set and
+                        ultra-compact form factor, this is next generation wireless audio
+                        for every creator.
+                    </p>
                     <!-- btn group -->
                     <div class="btn-group py-5 flex justify-center items-center md:py-6">
                         <a href="#" class="text-gold mr-5 font-semibold">LEARN MORE <i
-                                class="fa-solid fa-chevron-right "></i></a>
+                                class="fa-solid fa-chevron-right"></i></a>
                         <a href="#"
                             class="text-white bg-gold font-semibold px-5 py-1.5 rounded-full hover:bg-white hover:text-gold transition-all duration-300 ease-in">BUY
                             NOW</a>
@@ -266,26 +352,27 @@
             <div class="product-5 xl:bg-product-5 xl:h-[650px] bg-center bg-no-repeat bg-cover">
                 <!-- left-img -->
                 <div class="xl:hidden">
-                    <img src="./img/bg-6-mobile.jpg" alt="" class="mb-5  mx-auto md:w-[100%] md:mb-8">
+                    <img src="./img/bg-6-mobile.jpg" alt="" class="mb-5 mx-auto md:w-[100%] md:mb-8" />
                 </div>
                 <!-- right content -->
-                <div class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center  xl:pt-6   xl:pl-16">
+                <div class="px-3 xl:flex xl:flex-col xl:w-[50%] xl:h-[100%] xl:justify-center xl:pt-6 xl:pl-16">
                     <!-- mobile logo -->
                     <img src="./img/bg-6-logo-mobile.svg" alt=""
-                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:hidden ">
+                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:hidden" />
                     <!-- bigger screen logo -->
                     <img src="./img/bg-logo-6.svg" alt=""
-                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px] hidden xl:block ">
-                    <h4 class="h4 text-black text-center mb-3 xl:text-white">Broadcast-grade Dynamic Microphone</h4>
-                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-white xl:text-center xl:w-[70%]">Give your
-                        voice that
-                        rich,
-                        broadcast sound with the PodMic. Perfect for livestreaming, voice-over, podcasting and gameplay.
+                        class="mb-5 sm:w-[540px] sm:mx-auto md:w-[881px] xl:w-[540px] hidden xl:block" />
+                    <h4 class="h4 text-black text-center mb-3 xl:text-white">
+                        Broadcast-grade Dynamic Microphone
+                    </h4>
+                    <p class="text-midGray mb-5 sm:w-[80%] sm:mx-auto xl:text-white xl:text-center xl:w-[70%]">
+                        Give your voice that rich, broadcast sound with the PodMic.
+                        Perfect for livestreaming, voice-over, podcasting and gameplay.
                     </p>
                     <!-- btn group -->
                     <div class="btn-group py-5 flex justify-center items-center md:py-6">
                         <a href="#" class="text-gold mr-5 font-semibold xl:text-white">LEARN MORE <i
-                                class="fa-solid fa-chevron-right "></i></a>
+                                class="fa-solid fa-chevron-right"></i></a>
                         <a href="#"
                             class="text-white bg-gold font-semibold px-5 py-1.5 rounded-full hover:bg-white hover:text-gold transition-all duration-300 ease-in">BUY
                             NOW</a>
@@ -298,9 +385,6 @@
         <!--* Big container End  -->
     </section>
     <!--/ Product section End-->
-
-
-
 </body>
 
 </html>
